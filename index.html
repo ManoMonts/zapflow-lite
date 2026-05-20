@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ZapFlow Lite — CRM simples para WhatsApp</title>
+    <meta name="description" content="Mini CRM local para organizar clientes, orçamentos e retornos do WhatsApp." />
+    <meta name="theme-color" content="#07130f" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./src/styles.css" />
+  </head>
+  <body>
+    <div class="app-bg"></div>
+
+    <header class="topbar">
+      <a class="brand" href="#home" aria-label="ZapFlow Lite">
+        <span class="brand-icon">Z</span>
+        <span>ZapFlow Lite</span>
+      </a>
+      <nav class="nav-links" aria-label="Navegação principal">
+        <a href="#produto">Produto</a>
+        <a href="#preco">Preço</a>
+        <a href="#app">Abrir app</a>
+      </nav>
+      <button id="openAppTop" class="small-cta">Usar agora</button>
+    </header>
+
+    <main>
+      <section id="home" class="hero-shell">
+        <div class="hero-copy">
+          <span class="eyebrow">CRM local para pequenos negócios</span>
+          <h1>Não perca venda porque esqueceu de responder no WhatsApp.</h1>
+          <p>
+            Organize clientes, orçamentos, retornos e mensagens prontas em um painel simples. Sem login,
+            sem mensalidade nesta versão e com tudo salvo no seu navegador.
+          </p>
+          <div class="hero-actions">
+            <button id="openAppHero" class="primary-button">Começar grátis</button>
+            <a class="ghost-link" href="#produto">Ver como funciona</a>
+          </div>
+          <div class="trust-row">
+            <span>✓ Sem instalação obrigatória</span>
+            <span>✓ Abre mensagem no WhatsApp</span>
+            <span>✓ Dados locais</span>
+          </div>
+        </div>
+
+        <aside class="hero-card">
+          <div class="phone-frame">
+            <div class="phone-top"></div>
+            <div class="mini-dashboard">
+              <span class="mini-label">Hoje</span>
+              <strong>R$ 4.850</strong>
+              <small>em oportunidades abertas</small>
+              <div class="mini-pipeline">
+                <div><b>8</b><span>Novos</span></div>
+                <div><b>5</b><span>Retornos</span></div>
+                <div><b>3</b><span>Fechados</span></div>
+              </div>
+              <div class="whatsapp-bubble">Olá, tudo bem? Passando para saber se posso te ajudar com o orçamento.</div>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section id="produto" class="section-block">
+        <div class="section-heading">
+          <span class="eyebrow">Produto</span>
+          <h2>Feito para quem vende pelo WhatsApp, mas se perde no atendimento.</h2>
+          <p>
+            O ZapFlow Lite não tenta ser um CRM gigante. Ele resolve o básico que pequenos negócios precisam:
+            saber quem responder, quem cobrar retorno e quanto dinheiro está parado.
+          </p>
+        </div>
+        <div class="feature-grid">
+          <article><span>01</span><h3>Funil visual</h3><p>Organize clientes por status: novo, aguardando, orçamento enviado, fechado ou perdido.</p></article>
+          <article><span>02</span><h3>Retorno claro</h3><p>Cadastre a próxima data de contato e veja quem precisa de atenção.</p></article>
+          <article><span>03</span><h3>Mensagem pronta</h3><p>Gere textos rápidos e abra o WhatsApp com a mensagem preenchida.</p></article>
+          <article><span>04</span><h3>Sem complicar</h3><p>Funciona direto no navegador e salva localmente. Ideal para validar antes de pagar por sistema.</p></article>
+        </div>
+      </section>
+
+      <section id="preco" class="pricing-section">
+        <div class="pricing-card">
+          <span class="eyebrow">Oferta inicial</span>
+          <h2>Versão Lite gratuita</h2>
+          <p>Esta versão é um MVP utilizável. O produto pago futuro teria nuvem, login, equipe, relatórios e backup.</p>
+          <div class="price">R$ 0<span>/agora</span></div>
+          <button id="openAppPrice" class="primary-button">Abrir painel</button>
+        </div>
+        <div class="pricing-note">
+          <h3>Como eu venderia depois?</h3>
+          <p>
+            Primeiro como instalação personalizada para pequenos negócios. Depois como assinatura simples de R$ 19 a R$ 49/mês,
+            com dados online, modelos de mensagem e histórico por cliente.
+          </p>
+        </div>
+      </section>
+
+      <section id="app" class="crm-shell hidden" aria-live="polite">
+        <aside class="sidebar-panel">
+          <div class="sidebar-head">
+            <span class="brand-icon">Z</span>
+            <div><strong>ZapFlow</strong><small>Painel local</small></div>
+          </div>
+          <button data-view="dashboard" class="nav-button active">Painel</button>
+          <button data-view="pipeline" class="nav-button">Funil</button>
+          <button data-view="client" class="nav-button">Novo cliente</button>
+          <button data-view="templates" class="nav-button">Mensagens</button>
+          <button data-view="settings" class="nav-button">Dados</button>
+          <div class="sidebar-tip">
+            <strong>Dica</strong>
+            <p>Use o botão WhatsApp no cliente para abrir a conversa com mensagem pronta.</p>
+          </div>
+        </aside>
+
+        <section class="workspace">
+          <div class="workspace-head">
+            <div>
+              <span class="eyebrow">App</span>
+              <h2 id="viewTitle">Painel</h2>
+            </div>
+            <button id="quickAdd" class="primary-button compact">+ Cliente</button>
+          </div>
+
+          <section id="dashboardView" class="view active-view">
+            <div class="metric-grid">
+              <article class="metric-card"><span>Total aberto</span><strong id="metricOpenValue">R$ 0</strong><small>não fechados</small></article>
+              <article class="metric-card"><span>Clientes ativos</span><strong id="metricActiveClients">0</strong><small>em andamento</small></article>
+              <article class="metric-card"><span>Retornos vencidos</span><strong id="metricDueFollowups">0</strong><small>precisam contato</small></article>
+              <article class="metric-card"><span>Fechados</span><strong id="metricClosedValue">R$ 0</strong><small>ganhos</small></article>
+            </div>
+            <div class="split-grid">
+              <article class="panel-card">
+                <div class="panel-title"><h3>Prioridade de hoje</h3><button id="seedDemo" class="text-button">popular demo</button></div>
+                <div id="priorityList" class="client-list"></div>
+              </article>
+              <article class="panel-card">
+                <div class="panel-title"><h3>Resumo do funil</h3></div>
+                <div id="funnelSummary" class="funnel-summary"></div>
+              </article>
+            </div>
+          </section>
+
+          <section id="pipelineView" class="view">
+            <div id="pipelineBoard" class="pipeline-board"></div>
+          </section>
+
+          <section id="clientView" class="view">
+            <form id="clientForm" class="form-card">
+              <input type="hidden" id="editingId" />
+              <div class="form-grid">
+                <label>Nome do cliente<input id="clientName" required placeholder="Ex.: Ana Souza" /></label>
+                <label>WhatsApp<input id="clientPhone" placeholder="Ex.: 43999999999" /></label>
+                <label>Valor estimado<input id="clientValue" type="number" min="0" step="10" placeholder="Ex.: 850" /></label>
+                <label>Status<select id="clientStatus"></select></label>
+                <label>Próximo retorno<input id="clientFollowup" type="date" /></label>
+                <label>Origem<input id="clientSource" placeholder="Instagram, indicação, OLX..." /></label>
+              </div>
+              <label>Observações<textarea id="clientNotes" rows="4" placeholder="O que o cliente pediu? O que falta responder?"></textarea></label>
+              <div class="form-actions">
+                <button class="primary-button" type="submit">Salvar cliente</button>
+                <button id="clearForm" class="ghost-button" type="button">Limpar</button>
+              </div>
+            </form>
+          </section>
+
+          <section id="templatesView" class="view">
+            <div class="panel-card">
+              <div class="panel-title"><h3>Mensagens prontas</h3></div>
+              <div id="templateList" class="template-list"></div>
+            </div>
+          </section>
+
+          <section id="settingsView" class="view">
+            <div class="panel-card">
+              <h3>Dados locais</h3>
+              <p>Os clientes ficam salvos apenas neste navegador. Exporte um backup antes de limpar cache ou trocar de dispositivo.</p>
+              <div class="settings-actions">
+                <button id="exportData" class="primary-button compact">Exportar JSON</button>
+                <label class="ghost-upload">Importar JSON<input id="importData" type="file" accept="application/json" /></label>
+                <button id="clearData" class="danger-button">Apagar tudo</button>
+              </div>
+              <textarea id="dataPreview" rows="10" readonly></textarea>
+            </div>
+          </section>
+        </section>
+      </section>
+    </main>
+
+    <footer class="footer">ZapFlow Lite — MVP local para validação de produto.</footer>
+    <script src="./src/main.js"></script>
+  </body>
+</html>
